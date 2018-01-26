@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>invoice</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <ion-grid>
+     <div class="inv-header">
+      <ion-row>
+        <ion-col><b>INVOICE INFORMATION</b></ion-col>
+      </ion-row>
+    </div> 
+      <div class="inv-details">
+      <ion-row>
+          <ion-col><b>Invoice #:</b>{{invNum}}</ion-col>
+          <ion-col><b>Customer:</b>{{invName}}</ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col><b>Address:</b>{{invAddress}}</ion-col>          
+      </ion-row>
+      <ion-row>
+          <ion-col><b>City:</b>{{invCity}}</ion-col>
+          <ion-col><b>State:</b>{{invState}}</ion-col>
+      </ion-row>
+    </div>
+    </ion-grid>
+<ion-list>  
+  <ion-item *ngFor="let invItem of itemList">      
+   <b>SKU:</b> {{invItem.SKU}} <br>
+   <b>Description:</b> {{invItem.Description}}<br>
+   <b>Quantity:</b> {{invItem.Quantity}}<br>
+   <b>Cost:</b> {{invItem.Cost}}  
+  </ion-item>
+</ion-list>
+</ion-content>
